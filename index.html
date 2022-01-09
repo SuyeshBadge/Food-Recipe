@@ -1,117 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Recipe</title>
     <style>
-        body {
-            background-color: #000000;
-            font-family: sans-serif;
-            color: white
-        }
+      body {
+        background-color: #000000;
+        font-family: sans-serif;
+        color: white;
+      }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-        }
+      .small {
+        font-size: small;
+      }
 
-        .small {
-            font-size: small;
-        }
+      .thumb {
+        max-width: 380px;
+        border-radius: 8px;
+        /* display: flex; */
+        align-items: center;
+      }
 
-        .thumb {
-            max-width: 380px;
-            border-radius: 8px;
-            /* display: flex; */
-            align-items: center;
-        }
+      .card {
+        background-color: #302f31cc;
+        margin: 15px;
+        padding: 15px;
+        padding-left: 15px;
+        border-radius: 5px;
+        max-width: 700px;
+        min-width: 400px;
+      }
 
-        .card {
-            background-color: #302f31cc;
-            margin: 15px;
-            padding: 15px;
-            padding-left: 15px;
-            border-radius: 5px;
-            max-width: 700px;
-            min-width: 400px;
-        }
+      .card-title {
+        font-size: xx-large;
+        font-weight: 600;
+        padding: 15px;
+        margin: 1rem;
+      }
 
-        .card-title {
-            font-size: xx-large;
-            font-weight: 600;
-            padding: 15px;
-            margin: 1rem;
-        }
+      .card-body {
+        font-size: larger;
+        text-align: left;
+      }
 
-        .card-body {
-            font-size: larger;
-            text-align: left;
-        }
+      .table {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-rows: ; */
+        grid-column-gap: 14px;
+        /* grid-row-gap: 5px; */
+        padding: 5px;
+      }
 
-        .table {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            /* grid-template-rows: ; */
-            grid-column-gap: 14px;
-            /* grid-row-gap: 5px; */
-            padding: 5px;
+      .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
 
-        }
+      .div2 {
+        grid-area: 1 / 2 / 2 / 3;
+      }
 
-        .div1 {
-            grid-area: 1 / 1 / 2 / 2;
-        }
+      h2 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-style: italic;
+        font-size: x-large;
+      }
 
-        .div2 {
-            grid-area: 1 / 2 / 2 / 3;
-        }
+      h3 {
+        font-weight: 300;
+      }
 
-        h2 {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-style: italic;
-            font-size: x-large;
-        }
-
-        h3 {
-            font-weight: 300;
-        }
-
-        .inst {
-            margin: 15px;
-        }
+      .inst {
+        margin: 15px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="card">
-            <div class="card-title">
-                {%title%} <span class="small">({%category%})</span>
-            </div>
-            <div class="card-body">
-                <div>
-                    <div class="container">
-                        <img class="thumb" src="{%thumbnail%}" alt="">
-                    </div>
-                    <div>
-                        <h2>Ingredients</h2>
-                        {%ingredients%}
-                        <h2>Instructions</h2>
-                        <h3>
-                            {%instructions%}
-
-                        </h3>
-                    </div>
-                </div>
-            </div>
+      <div class="card">
+        <div class="card-title">
+          {%title%} <span class="small">({%category%})</span>
         </div>
+        <div class="card-body">
+          <div>
+            <div class="container">
+              <img class="thumb" src="{%thumbnail%}" alt="" />
+            </div>
+            <div>
+              <h2>Ingredients</h2>
+              {%ingredients%}
+              <h2>Instructions</h2>
+              <h3>{%instructions%}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
